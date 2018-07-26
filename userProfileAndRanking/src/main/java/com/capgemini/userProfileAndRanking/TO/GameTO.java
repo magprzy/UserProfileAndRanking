@@ -10,7 +10,7 @@ public class GameTO {
 		
 	}
 	
-	public GameTO(String gameName) {
+	public GameTO(int gameId, String gameName, String additionalInformation) {
 		this.gameName = gameName;
 
 	}

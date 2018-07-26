@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
+import javax.activity.InvalidActivityException;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +21,7 @@ import com.capgemini.userProfileAndRanking.dao.impl.UserBoardGamesDaoImpl;
 public class BoardGameCollectionServiceImplTest {
 
 	@Autowired
-	BoardGameCollectionServiceImpl boardGameCollectionServiceImpl;
+	BoardGameCollectionServiceImpl gameCollectionService;
 	
 	@Autowired
 	BoardGamesCollectionDaoImpl systemGames;
@@ -47,9 +49,34 @@ public class BoardGameCollectionServiceImplTest {
 		userGames.exapmleUserAndGamesID();
 		
 		
-		List<GameTO> result = boardGameCollectionServiceImpl.seeOwnGames(1);
+		List<GameTO> result = gameCollectionService.seeOwnGames(1);
 		
 		assertEquals("Chess", result.get(0).getGameName());
+		assertEquals(1, result.size());
 		
 	}
+	
+	@Test 
+	public void shouldReturnAllSystemGames(){
+		systemGames.exampleGames();
+		
+		List<GameTO> result = gameCollectionService.seeAllSystemGames();
+		
+		assertEquals("Chess", result.get(0).getGameName());
+		assertEquals("Ticket to Ride", result.get(1).getGameName());
+		assertEquals("Splendor", result.get(2).getGameName());
+		
+	}
+	
+	@Test
+	public void shouldAddGameToSystem() throws InvalidActivityException{
+		systemGames.exampleGames();
+		
+		gameCollectionService.addNewGameToSystem(new GameTO(4, "Taboo", "party game"));
+		
+		List<GameTO> result = gameCollectionService.seeAllSystemGames();
+		
+		assertEquals("Taboo", result.get(3).getGameName());
+	}
 }
+
