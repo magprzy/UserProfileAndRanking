@@ -40,8 +40,7 @@ public class BoardGameCollectionServiceImpl
 	public List<GameTO> seeOwnGames(int userId) {
 
 		List<GameTO> userBoardGamesCollection = new ArrayList<GameTO>();
-		List<Integer> userGamesIdCollectionDAO = userBoardGamesIdListDAO
-				.getUserBoardGamesIdCollection(userId);
+		List<Integer> userGamesIdCollectionDAO = userBoardGamesIdListDAO.getUserBoardGamesIdCollection(userId);
 		for (int i = 0; i < userGamesIdCollectionDAO.size(); i++) {
 			int currentGameId = userGamesIdCollectionDAO.get(i);
 
@@ -86,8 +85,8 @@ public class BoardGameCollectionServiceImpl
 		int gameId = 0;
 
 		for (int i = 0; i < systemGamesCollection.size(); i++) {
-			if (systemGamesCollection.get(i).getGameName() == newGame
-					.getGameName()) {
+			if (systemGamesCollection.get(i).getGameName().equals(newGame
+					.getGameName())) {
 				gameId = systemGamesCollection.get(i).getGameID();
 			} else {
 				throw new NoSuchElementException();

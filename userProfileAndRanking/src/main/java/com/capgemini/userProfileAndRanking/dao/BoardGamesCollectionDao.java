@@ -13,5 +13,7 @@ public interface BoardGamesCollectionDao {
 	public Game getGameById(int gameID);
 	
 	public void updateUserList (Game newGame);
+	
+	public void addNewGame(Game newGame);
 
 }

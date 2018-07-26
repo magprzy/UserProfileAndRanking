@@ -10,8 +10,10 @@ public class Game {
 	public Game(){
 		
 	}
-	public Game(String gameName) {
+	public Game( int gameId, String gameName, String additionalInformation) {
 		this.gameName = gameName;
+		this.gameID = gameId;
+		this.additionalInformation = additionalInformation;
 	}
 
 	public String getGameName() {

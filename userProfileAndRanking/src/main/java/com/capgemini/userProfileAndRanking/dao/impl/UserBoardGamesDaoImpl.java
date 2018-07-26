@@ -11,7 +11,8 @@ import com.capgemini.userProfileAndRanking.dao.UserBoardGamesDao;
 @Repository
 public class UserBoardGamesDaoImpl implements UserBoardGamesDao{
 
-	List<GameAndUser> gameAndUsersList;
+	List<GameAndUser> gameAndUsersList = new ArrayList<>();
+	
 	@Override
 	public List<Integer> getUserBoardGamesIdCollection(int userId) {
 		

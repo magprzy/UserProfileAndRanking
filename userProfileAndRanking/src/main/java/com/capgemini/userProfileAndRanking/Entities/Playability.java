@@ -9,6 +9,17 @@ public class Playability {
 	boolean statusIsAvailable;
 	String comment;
 
+	public Playability(){
+		
+	}
+	
+	public Playability(int userID, Availability availability, String comment, boolean statusIsAvailable){
+		this.availability = availability;
+		this.userId = userID;
+		this.statusIsAvailable = statusIsAvailable;
+		this.comment = comment;
+		
+	}
 	public boolean getStatusIsAvailable() {
 		return statusIsAvailable;
 	}
