@@ -3,7 +3,7 @@ package com.capgemini.userProfileAndRanking.dao;
 import java.util.List;
 
 import com.capgemini.userProfileAndRanking.Level;
-import com.capgemini.userProfileAndRanking.Entities.Statistics;
+import com.capgemini.userProfileAndRanking.entities.Statistics;
 
 public interface StatisticsDao {
 

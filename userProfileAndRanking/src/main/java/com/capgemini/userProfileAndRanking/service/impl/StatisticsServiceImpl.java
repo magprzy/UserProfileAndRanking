@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.userProfileAndRanking.dao.impl.StatisticsDaoImpl;
+import com.capgemini.userProfileAndRanking.entities.Statistics;
 import com.capgemini.userProfileAndRanking.Level;
-import com.capgemini.userProfileAndRanking.Entities.Statistics;
 import com.capgemini.userProfileAndRanking.service.StatisticsService;
 
 @Service

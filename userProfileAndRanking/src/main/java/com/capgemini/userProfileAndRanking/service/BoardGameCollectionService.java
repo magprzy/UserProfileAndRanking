@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.activity.InvalidActivityException;
 
-import com.capgemini.userProfileAndRanking.TO.GameTO;
+import com.capgemini.userProfileAndRanking.to.GameTO;
 
 public interface BoardGameCollectionService {
 	

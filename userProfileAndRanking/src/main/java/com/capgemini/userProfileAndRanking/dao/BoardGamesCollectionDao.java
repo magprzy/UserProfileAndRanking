@@ -2,7 +2,7 @@ package com.capgemini.userProfileAndRanking.dao;
 
 import java.util.List;
 
-import com.capgemini.userProfileAndRanking.Entities.Game;
+import com.capgemini.userProfileAndRanking.entities.Game;
 
 public interface BoardGamesCollectionDao {
 

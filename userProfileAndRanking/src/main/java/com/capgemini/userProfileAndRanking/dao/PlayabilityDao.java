@@ -3,7 +3,7 @@ package com.capgemini.userProfileAndRanking.dao;
 import java.util.List;
 
 import com.capgemini.userProfileAndRanking.Availability;
-import com.capgemini.userProfileAndRanking.Entities.Playability;
+import com.capgemini.userProfileAndRanking.entities.Playability;
 
 public interface PlayabilityDao {
 

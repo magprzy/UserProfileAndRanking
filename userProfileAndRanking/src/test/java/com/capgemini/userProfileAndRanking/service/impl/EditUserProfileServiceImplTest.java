@@ -8,15 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.capgemini.userProfileAndRanking.TO.UserTO;
 import com.capgemini.userProfileAndRanking.dao.impl.UserProfileDaoImpl;
+import com.capgemini.userProfileAndRanking.to.UserTO;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class EditUserProfileServiceImplTest {
 
 	@Autowired
-	EditUserProfileServiceImpl editUserProfileServiceImpl;
+	UserProfileServiceImpl editUserProfileServiceImpl;
 	
 	@Autowired
 	UserProfileDaoImpl UserProfileDaoImpl;
@@ -25,8 +25,8 @@ public class EditUserProfileServiceImplTest {
 	@Test
 	public void shouldGetAllPlayerInformation() {
 		
-		UserProfileDaoImpl.exampleUsers();
-		UserTO result = editUserProfileServiceImpl.checkPlayerInformation(2);
+		
+		UserTO result = editUserProfileServiceImpl.getPlayerInformation(2);
 		assertEquals(2, result.getId());
 		assertEquals("Adam", result.getFirstName());
 		assertEquals("Nowak", result.getLastName());
@@ -38,9 +38,9 @@ public class EditUserProfileServiceImplTest {
 	@Test
 	public void shouldChangeFirstName() {
 		
-		UserProfileDaoImpl.exampleUsers();
+		
 		editUserProfileServiceImpl.changeFirstName(5, "Filip");
-		UserTO result = editUserProfileServiceImpl.checkPlayerInformation(5);
+		UserTO result = editUserProfileServiceImpl.getPlayerInformation(5);
 		assertEquals("Filip", result.getFirstName());
 	}
 	
@@ -48,36 +48,36 @@ public class EditUserProfileServiceImplTest {
 	@Test
 	public void shouldChangeLastName() {
 		
-		UserProfileDaoImpl.exampleUsers();
+		
 		editUserProfileServiceImpl.changeLastName(5, "Nawrocka");
-		UserTO result = editUserProfileServiceImpl.checkPlayerInformation(5);
+		UserTO result = editUserProfileServiceImpl.getPlayerInformation(5);
 		assertEquals("Nawrocka", result.getLastName());
 	}
 	
 	@Test
 	public void shouldChangeEmail() {
 		
-		UserProfileDaoImpl.exampleUsers();
+		
 		editUserProfileServiceImpl.changeEmail(5, "email@email.com");
-		UserTO result = editUserProfileServiceImpl.checkPlayerInformation(5);
+		UserTO result = editUserProfileServiceImpl.getPlayerInformation(5);
 		assertEquals("email@email.com", result.getEmail());
 	}
 	
 	@Test
 	public void shouldChangePassword() {
 		
-		UserProfileDaoImpl.exampleUsers();
+		
 		editUserProfileServiceImpl.changePassword(5, "qwertz");
-		UserTO result = editUserProfileServiceImpl.checkPlayerInformation(5);
+		UserTO result = editUserProfileServiceImpl.getPlayerInformation(5);
 		assertEquals("qwertz", result.getPassword());
 	}
 	
 	@Test
 	public void shouldChangeMotto() {
 		
-		UserProfileDaoImpl.exampleUsers();
+		
 		editUserProfileServiceImpl.changeMotto(5, "U mnie dziala");
-		UserTO result = editUserProfileServiceImpl.checkPlayerInformation(5);
+		UserTO result = editUserProfileServiceImpl.getPlayerInformation(5);
 		assertEquals("U mnie dziala", result.getMotto());
 	}
 	

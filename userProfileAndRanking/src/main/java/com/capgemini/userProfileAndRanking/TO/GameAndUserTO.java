@@ -1,4 +1,4 @@
-package com.capgemini.userProfileAndRanking.TO;
+package com.capgemini.userProfileAndRanking.to;
 
 public class GameAndUserTO {
 	private int userId;

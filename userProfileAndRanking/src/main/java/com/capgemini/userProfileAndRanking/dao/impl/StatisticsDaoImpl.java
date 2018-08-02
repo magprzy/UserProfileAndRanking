@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.capgemini.userProfileAndRanking.Level;
-import com.capgemini.userProfileAndRanking.Entities.Statistics;
 import com.capgemini.userProfileAndRanking.dao.StatisticsDao;
+import com.capgemini.userProfileAndRanking.entities.Statistics;
 
 @Repository
 public class StatisticsDaoImpl implements StatisticsDao {

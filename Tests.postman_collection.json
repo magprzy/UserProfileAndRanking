@@ -1,0 +1,116 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Tests",
+		"_postman_id": "eb5cf2e6-c91e-adfd-de32-6a7cdc43ef4e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"url": "http://localhost:8080/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 1,\n        \"firstName\": \"Jan\",\n        \"lastName\": \"Kowalski\",\n        \"email\": \"jkowalski@gmail.com\",\n        \"password\": \"admin0101\",\n        \"motto\": \"The best moment is right now\"\n    }"
+				},
+				"description": "Should return all users"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/search?first=&last=Kowalski&email=",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/users/search?first=&last=Kowalski&email=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first",
+							"value": "",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "last",
+							"value": "Kowalski",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "email",
+							"value": "",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Should find all users with last name Kowalski"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/4",
+			"request": {
+				"url": "http://localhost:8080/users/4",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Should find user wit ID 4"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/222",
+			"request": {
+				"url": "http://localhost:8080/users/222",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Should catch exception if user doesn't exist."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"url": "http://localhost:8080/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 12,\n        \"firstName\": \"Pawel\",\n        \"lastName\": \"Kowalski\",\n        \"email\": \"pk@gmail.com\",\n        \"password\": \"123qwertz\",\n        \"motto\": \"Hmmm\"\n    }"
+				},
+				"description": "Should add only once new user to the base. \n\n"
+			},
+			"response": []
+		}
+	]
+}

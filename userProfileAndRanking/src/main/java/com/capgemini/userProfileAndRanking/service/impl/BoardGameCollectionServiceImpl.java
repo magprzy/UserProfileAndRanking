@@ -9,15 +9,15 @@ import javax.activity.InvalidActivityException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.capgemini.userProfileAndRanking.Entities.Game;
-import com.capgemini.userProfileAndRanking.Entities.GameAndUser;
-import com.capgemini.userProfileAndRanking.Maper.GameAndUserMapper;
-import com.capgemini.userProfileAndRanking.Maper.GameMapper;
-import com.capgemini.userProfileAndRanking.TO.GameAndUserTO;
-import com.capgemini.userProfileAndRanking.TO.GameTO;
 import com.capgemini.userProfileAndRanking.dao.impl.BoardGamesCollectionDaoImpl;
 import com.capgemini.userProfileAndRanking.dao.impl.UserBoardGamesDaoImpl;
+import com.capgemini.userProfileAndRanking.entities.Game;
+import com.capgemini.userProfileAndRanking.entities.GameAndUser;
+import com.capgemini.userProfileAndRanking.maper.GameAndUserMapper;
+import com.capgemini.userProfileAndRanking.maper.GameMapper;
 import com.capgemini.userProfileAndRanking.service.BoardGameCollectionService;
+import com.capgemini.userProfileAndRanking.to.GameAndUserTO;
+import com.capgemini.userProfileAndRanking.to.GameTO;
 
 @Service
 public class BoardGameCollectionServiceImpl

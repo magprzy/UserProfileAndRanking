@@ -12,9 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.capgemini.userProfileAndRanking.TO.GameTO;
 import com.capgemini.userProfileAndRanking.dao.impl.BoardGamesCollectionDaoImpl;
 import com.capgemini.userProfileAndRanking.dao.impl.UserBoardGamesDaoImpl;
+import com.capgemini.userProfileAndRanking.to.GameTO;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

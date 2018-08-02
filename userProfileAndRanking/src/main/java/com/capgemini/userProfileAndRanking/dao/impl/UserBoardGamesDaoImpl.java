@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.capgemini.userProfileAndRanking.Entities.GameAndUser;
 import com.capgemini.userProfileAndRanking.dao.UserBoardGamesDao;
+import com.capgemini.userProfileAndRanking.entities.GameAndUser;
 
 @Repository
 public class UserBoardGamesDaoImpl implements UserBoardGamesDao{

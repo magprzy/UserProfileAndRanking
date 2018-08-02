@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.userProfileAndRanking.Availability;
-import com.capgemini.userProfileAndRanking.Entities.Challenge;
-import com.capgemini.userProfileAndRanking.Entities.Playability;
 import com.capgemini.userProfileAndRanking.dao.impl.PlayabilityDaoImpl;
+import com.capgemini.userProfileAndRanking.entities.Challenge;
+import com.capgemini.userProfileAndRanking.entities.Playability;
 import com.capgemini.userProfileAndRanking.service.PlayabilityService;
 
 @Service

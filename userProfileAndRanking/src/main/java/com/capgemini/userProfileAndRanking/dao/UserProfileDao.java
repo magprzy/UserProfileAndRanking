@@ -2,18 +2,18 @@ package com.capgemini.userProfileAndRanking.dao;
 
 import java.util.List;
 
-import com.capgemini.userProfileAndRanking.Entities.User;
+import com.capgemini.userProfileAndRanking.entities.User;
 
 
 public interface UserProfileDao {
 
-	public List<User> getAllUsers();
+	 List<User> getAllUsers();
 	
-	public User findUserById(int id);
+	 User getUserById(int id);
 	
-	public void updateUser(User user);
-		
-	
+	 void updateUser(User user);
+
+	 List<User> getByParameters(String firstName, String lastName, String email);
 	
 	
 }

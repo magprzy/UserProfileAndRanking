@@ -1,9 +1,9 @@
-package com.capgemini.userProfileAndRanking.Maper;
+package com.capgemini.userProfileAndRanking.maper;
 
 import org.springframework.stereotype.Component;
 
-import com.capgemini.userProfileAndRanking.Entities.User;
-import com.capgemini.userProfileAndRanking.TO.UserTO;
+import com.capgemini.userProfileAndRanking.entities.User;
+import com.capgemini.userProfileAndRanking.to.UserTO;
 
 @Component
 public class UserMapper {

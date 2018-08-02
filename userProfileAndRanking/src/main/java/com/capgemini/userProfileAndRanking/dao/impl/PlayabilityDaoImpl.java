@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.capgemini.userProfileAndRanking.Availability;
-import com.capgemini.userProfileAndRanking.Entities.Playability;
 import com.capgemini.userProfileAndRanking.dao.PlayabilityDao;
+import com.capgemini.userProfileAndRanking.entities.Playability;
 
 @Repository
 public class PlayabilityDaoImpl implements PlayabilityDao {

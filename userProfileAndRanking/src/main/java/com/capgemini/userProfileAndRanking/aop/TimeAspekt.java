@@ -1,4 +1,4 @@
-package com.capgemini.userProfileAndRanking.AOP;
+package com.capgemini.userProfileAndRanking.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;

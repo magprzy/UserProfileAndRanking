@@ -1,4 +1,4 @@
-package com.capgemini.userProfileAndRanking.Entities;
+package com.capgemini.userProfileAndRanking.entities;
 
 
 public class User {

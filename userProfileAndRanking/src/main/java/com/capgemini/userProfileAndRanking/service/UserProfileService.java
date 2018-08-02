@@ -1,10 +1,10 @@
 package com.capgemini.userProfileAndRanking.service;
 
-import com.capgemini.userProfileAndRanking.TO.UserTO;
+import com.capgemini.userProfileAndRanking.to.UserTO;
 
-public interface EditUserProfileService {
+public interface UserProfileService {
 	
-	public UserTO checkPlayerInformation(int userId);
+	public UserTO getPlayerInformation(int userId);
 	
 	public void changeFirstName(int userId, String newFirstName);
 	
